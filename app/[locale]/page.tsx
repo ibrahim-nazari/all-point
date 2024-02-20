@@ -3,6 +3,7 @@ import { SearchBar, CustomFilter, Hero } from "@components";
 import { useTranslations } from "next-intl";
 export default function Home() {
   const t = useTranslations("IndexPage");
+
   return (
     <main className="overflow-hidden">
       <Hero />
