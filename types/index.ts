@@ -69,4 +69,6 @@ export interface SearchManuFacturerProps {
 export interface NavigationsType {
   title: string;
   link: string;
+  id: string;
+  submenu: { title: string; link: string; id: string }[];
 }

@@ -1,24 +1,85 @@
 {
   "navigations": {
-    "cooler&freezer": {
+    "menu1": {
       "title": "Cooler & Freezer",
-      "link": "/"
+      "link": "/",
+      "submenu": {
+        "submenu1": {
+          "title": "Walk-in Coolers",
+          "link": "/"
+        },
+        "submenu2": {
+          "title": "Walk in Freezer",
+          "link": "/"
+        },
+        "submenu3": {
+          "title": "Walk-in Cooler & Freezer Combo",
+          "link": "/"
+        },
+        "submenu4": {
+          "title": "Convenience Store Cooler",
+          "link": "/"
+        },
+        "submenu5": {
+          "title": "Drive-in Cooler & Freezer",
+          "link": "/"
+        }
+      }
     },
-    "byIndustry": {
+    "menu2": {
       "title": "By Industry",
-      "link": "/"
+      "link": "/",
+      "submenu": {
+        "submenu1": {
+          "title": "Grocery Store Walk-In Coolers and Freezers",
+          "link": "/"
+        },
+        "submenu2": {
+          "title": "Food Manufacturing and Processing",
+          "link": "/"
+        },
+        "submenu3": {
+          "title": "Food Service",
+          "link": "/"
+        },
+        "submenu4": {
+          "title": "Food Distribution",
+          "link": "/"
+        },
+        "submenu5": {
+          "title": "Scientific",
+          "link": "/"
+        },
+        "submenu6": {
+          "title": "Convenience Store",
+          "link": "/"
+        },
+        "submenu7": {
+          "title": "Floral Coolers",
+          "link": "/"
+        },
+        "submenu8": {
+          "title": "Cold Storage Warehouse",
+          "link": "/"
+        },
+        "submenu9": {
+          "title": "Equipment Enclosures",
+          "link": "/"
+        }
+      }
     },
-    "aboutus": {
+    "menu3": {
       "title": "About Us",
       "link": "/"
     },
-    "contactus": {
+    "menu4": {
       "title": "Contact Us",
       "link": "/"
     }
   },
+
   "IndexPage": {
-    "title": "This is the title",
+    "title": "next-intl example",
     "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes."
   },
   "PathnamesPage": {

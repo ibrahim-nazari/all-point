@@ -1,4 +1,4 @@
-import { CarProps, FilterProps } from "@types";
+import { CarProps, FilterProps, NavigationsType } from "@types";
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
   const basePricePerDay = 50; // Base rental price per day in dollars
@@ -36,7 +36,9 @@ export const deleteSearchParams = (type: string) => {
   newSearchParams.delete(type.toLocaleLowerCase());
 
   // Construct the updated URL pathname with the deleted search parameter
-  const newPathname = `${window.location.pathname}?${newSearchParams.toString()}`;
+  const newPathname = `${
+    window.location.pathname
+  }?${newSearchParams.toString()}`;
 
   return newPathname;
 };
@@ -68,13 +70,50 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
   const url = new URL("https://cdn.imagin.studio/getimage");
   const { make, model, year } = car;
 
-  url.searchParams.append('customer', process.env.NEXT_PUBLIC_IMAGIN_API_KEY || '');
-  url.searchParams.append('make', make);
-  url.searchParams.append('modelFamily', model.split(" ")[0]);
-  url.searchParams.append('zoomType', 'fullscreen');
-  url.searchParams.append('modelYear', `${year}`);
+  url.searchParams.append(
+    "customer",
+    process.env.NEXT_PUBLIC_IMAGIN_API_KEY || ""
+  );
+  url.searchParams.append("make", make);
+  url.searchParams.append("modelFamily", model.split(" ")[0]);
+  url.searchParams.append("zoomType", "fullscreen");
+  url.searchParams.append("modelYear", `${year}`);
   // url.searchParams.append('zoomLevel', zoomLevel);
-  url.searchParams.append('angle', `${angle}`);
+  url.searchParams.append("angle", `${angle}`);
 
   return `${url}`;
-} 
+};
+
+export const extractNavigation = (t: any) => {
+  const nav1 = ["menu1", "menu2", "menu3", "menu4"] as const;
+  const nav2 = [
+    "submenu1",
+    "submenu2",
+    "submenu3",
+    "submenu4",
+    "submenu5",
+  ] as const;
+  let navigations: NavigationsType[] = nav1.map((key, indx) => {
+    const hasSubMenu =
+      t(`${key}.submenu.submenu1.title`) !=
+      `navigations.${key}.submenu.submenu1.title`;
+
+    const submenu = hasSubMenu
+      ? nav2.map((subkey, index) => {
+          return {
+            title: t(`${key}.submenu.${subkey}.title`),
+            link: t(`${key}.submenu.${subkey}.link`),
+            id: `${index + 1}sub`,
+          };
+        })
+      : [];
+    return {
+      title: t(`${key}.title`),
+      link: t(`${key}.link`),
+      id: `${indx + 1}`,
+      submenu,
+    };
+  });
+
+  return navigations;
+};
