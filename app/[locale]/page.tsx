@@ -1,27 +1,50 @@
-import { fuels, yearsOfProduction } from "@constants";
-import { SearchBar, CustomFilter, Hero } from "@components";
+import { Hero } from "@components";
 import { useTranslations } from "next-intl";
+import About from "@components/About/About";
+import Product from "@components/Product/Product";
+import Service from "@components/Service";
+import { products, productsCoolerAndFreezer } from "@data/product";
+
+import Blog from "@components/Blog";
+import Contact from "@components/Contact";
 export default function Home() {
   const t = useTranslations("IndexPage");
 
   return (
     <main className="overflow-hidden">
       <Hero />
-
-      <div className="mt-12 padding-x padding-y max-width" id="discover">
-        <div className="home__text-container">
-          <h1>{t("title")}</h1>
-          <h1 className="text-4xl font-extrabold">Car Catalogue</h1>
-          <p>Explore out cars you might like</p>
+      <div className="container mx-auto px-10 sm:px-14">
+        <About />
+      </div>
+      <div className="w-full bg-gray-50 py-20">
+        <div className="container mx-auto px-10 sm:px-14">
+          <Product
+            columns={4}
+            products={products}
+            title="Product Applications"
+          />
         </div>
+      </div>
 
-        <div className="home__filters">
-          <SearchBar />
+      <div className="container mx-auto px-10 sm:px-14">
+        <Service />
+      </div>
+      <div className="w-full bg-gray-50 py-20">
+        <div className="container mx-auto px-10 sm:px-14">
+          <Product
+            products={productsCoolerAndFreezer}
+            title="Explore Coolers & Freezers"
+            columns={3}
+          />
+        </div>
+      </div>
 
-          <div className="home__filter-container">
-            <CustomFilter title="fuel" options={fuels} />
-            <CustomFilter title="year" options={yearsOfProduction} />
-          </div>
+      <div className="container mx-auto px-10 sm:px-14">
+        <Blog />
+      </div>
+      <div className="w-full bg-gray-50">
+        <div className="container mx-auto px-10 sm:px-14">
+          <Contact />
         </div>
       </div>
     </main>

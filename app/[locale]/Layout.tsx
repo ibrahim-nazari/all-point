@@ -10,8 +10,8 @@ export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
 export const metadata = {
-  title: "Car Hub",
-  description: "Discover world's best car showcase application",
+  title: "All Points",
+  description: "Global Leader In Cold Storage Solutions",
 };
 
 const RootLayout = ({
@@ -27,9 +27,7 @@ const RootLayout = ({
     <html lang={locale} dir="ltr">
       <body className="relative">
         <Header />
-
         {children}
-
         <Footer />
       </body>
     </html>

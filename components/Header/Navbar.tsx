@@ -35,12 +35,12 @@ const NavBar = ({ navigations }: Props) => {
       <div className="container relative mx-auto">
         <Link href="/" className="logo ml-3">
           <img
-            src="/logo.svg"
+            src="/allpoint-logo.png"
             className="inline-block w-32 lg:w-40 dark:hidden"
             alt=""
           />
           <img
-            src="/logo.svg"
+            src="/allpoint-logo.png"
             className="hidden dark:inline-block w-32 lg:w-40"
             alt=""
           />

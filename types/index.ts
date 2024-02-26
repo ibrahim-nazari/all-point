@@ -72,3 +72,10 @@ export interface NavigationsType {
   id: string;
   submenu: { title: string; link: string; id: string }[];
 }
+
+export interface ProductType {
+  title: string;
+  image: string;
+  slug: string;
+  id: number;
+}
