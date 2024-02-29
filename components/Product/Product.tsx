@@ -1,4 +1,5 @@
 import { ProductType } from "@types";
+import { useLocale } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
@@ -9,6 +10,7 @@ interface Props {
 }
 
 const Product = ({ products, title, columns }: Props) => {
+  const isActiveLocal = useLocale();
   return (
     <section>
       <div className="container relative ">
@@ -45,7 +47,8 @@ const Product = ({ products, title, columns }: Props) => {
                   href={`/product/${product.slug}`}
                   className="title h5 text-xl font-bold  hover:text-indigo-600 duration-500 ease-in-out"
                 >
-                  {product.title}
+                  {/* @ts-ignore */}
+                  {product.title[isActiveLocal]}
                 </Link>
                 <div className="w-20 h-1 bg-blue-600 mb-5 mt-2"></div>
               </div>

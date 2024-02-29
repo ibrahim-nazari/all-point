@@ -6,10 +6,10 @@ import Service from "@components/Service";
 import { products, productsCoolerAndFreezer } from "@data/product";
 
 import Blog from "@components/Blog";
-import Contact from "@components/Contact";
-export default function Home() {
-  const t = useTranslations("IndexPage");
+import ContactWrapper from "@components/Contact";
 
+export default function Home() {
+  const t = useTranslations("productHome");
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -18,11 +18,7 @@ export default function Home() {
       </div>
       <div className="w-full bg-gray-50 py-20">
         <div className="container mx-auto px-10 sm:px-14">
-          <Product
-            columns={4}
-            products={products}
-            title="Product Applications"
-          />
+          <Product columns={4} products={products} title={t("title1")} />
         </div>
       </div>
 
@@ -33,7 +29,7 @@ export default function Home() {
         <div className="container mx-auto px-10 sm:px-14">
           <Product
             products={productsCoolerAndFreezer}
-            title="Explore Coolers & Freezers"
+            title={t("title2")}
             columns={3}
           />
         </div>
@@ -43,9 +39,7 @@ export default function Home() {
         <Blog />
       </div>
       <div className="w-full bg-gray-50">
-        <div className="container mx-auto px-10 sm:px-14">
-          <Contact />
-        </div>
+        <ContactWrapper />
       </div>
     </main>
   );

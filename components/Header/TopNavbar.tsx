@@ -6,7 +6,9 @@ import {
 
 import Link from "next/link";
 import LanguageSelector from "./LanguageSelector";
+import { useTranslations } from "next-intl";
 const TopNavbar = () => {
+  const t = useTranslations("topNavbar");
   return (
     <div
       className={`tagline bg-blue-600 dark:bg-slate-900 h-8 flex items-center dark:border-gray-800 w-4/5 z-10 top-0`}
@@ -19,9 +21,9 @@ const TopNavbar = () => {
                 <div className="text-white hover:text-gray-100  items-center inline-flex">
                   <ClockIcon className="h-5 w-5 mr-2 text-white" />
                   <span className="font-bold mr-3 text-sm ">
-                    Business Hours
+                    {t("bussinessHour")}
                   </span>
-                  <span className="text-sm">Mon-Fri, 9am-5pm</span>
+                  <span className="text-sm">{t("workDays")}</span>
                 </div>
               </li>
               <li className=" mb-0 mx-3 hidden sm:inline">

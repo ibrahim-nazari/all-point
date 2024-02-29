@@ -3,15 +3,12 @@ import Link from "next/link";
 
 import { useTranslations } from "next-intl";
 import { extractNavigation } from "@utils";
-import {
-  EnvelopeIcon,
-  FaceFrownIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/outline";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { socialMedia } from "@data";
 
 const Footer = () => {
   const t = useTranslations("navigations");
+  const tfooter = useTranslations("footer");
   const navigations = extractNavigation(t);
   return (
     <footer className="flex flex-col text-black-100  mt-5 border-t border-gray-100">
@@ -25,10 +22,7 @@ const Footer = () => {
             className="object-contain"
           />
           <p className="text-base text-gray-700 max-w-md">
-            All Point Thermal Systems provides custom walk-in coolers and
-            freezers with quality and efficiency. We serve various industries
-            from two Dallas, TX. warehouses and have great customer service. We
-            also donate to local food banks.
+            {tfooter("aboutDescription")}
           </p>
           <div className="flex flex-col justify-between ">
             <div className="flex  items-center">
@@ -98,19 +92,13 @@ const Footer = () => {
       </div>
 
       <div className="flex justify-between items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10">
-        <p>
-          <span className="text-base font-semibold">
-            @2024 All Point Thermal Systems
-          </span>{" "}
-          All rights reserved
-        </p>
-
+        <p>{tfooter("rightReserved")}</p>
         <div className="footer__copyrights-link">
           <Link href="/" className="text-gray-500">
-            Privacy & Policy
+            {tfooter("privacyPolicy")}
           </Link>
           <Link href="/" className="text-gray-500">
-            Terms & Condition
+            {tfooter("termCondition")}
           </Link>
         </div>
       </div>

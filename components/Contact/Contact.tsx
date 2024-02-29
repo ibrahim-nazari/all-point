@@ -1,5 +1,11 @@
 "use client";
-import { contactinfo } from "@data";
+
+import {
+  EnvelopeIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/outline";
+import { ContactType } from "@types";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
 import { object, string, mixed } from "yup";
@@ -11,7 +17,33 @@ let contactSchema = object({
   message: string().required().min(5).max(500),
 });
 
-const Contact = () => {
+interface Props {
+  contactData: ContactType;
+}
+const Contact = ({ contactData }: Props) => {
+  const contactinfo = [
+    {
+      label: contactData.email,
+      Icon: EnvelopeIcon,
+      value: "ibrahimnazaryweb@gmail.com",
+      id: 1,
+      link: "mailto:ibrahimnazaryweb@gmail.com",
+    },
+    {
+      label: contactData.phone,
+      Icon: PhoneIcon,
+      value: "(+1) 434 342 232",
+      id: 2,
+      link: "tel:+1434 342 232",
+    },
+    {
+      label: contactData.address,
+      Icon: MapPinIcon,
+      value: contactData.addressValue,
+      id: 2,
+      link: "google map link",
+    },
+  ];
   const firstName = useRef<HTMLInputElement>(null);
   const lastName = useRef<HTMLInputElement>(null);
   const email = useRef<HTMLInputElement>(null);
@@ -34,7 +66,6 @@ const Contact = () => {
         message: message.current?.value,
       };
       const formdata = await contactSchema.validate(data);
-      console.log("formdata---", formdata);
     } catch (error: any) {
       setErrors(error.errors);
     }
@@ -43,9 +74,9 @@ const Contact = () => {
     <section id="contact" className="py-20 ">
       <div className="container">
         <div className="text-center max-w-xl mx-auto">
-          <h2 className="text-3xl font-semibold mb-3">Get in touch with us</h2>
+          <h2 className="text-3xl font-semibold mb-3">{contactData.title}</h2>
           <p className="text-base font-normal text-gray-500">
-            You can expect a reply from us in 24 hours.
+            {contactData.subTitle}
           </p>
         </div>
 
@@ -82,13 +113,13 @@ const Contact = () => {
                       htmlFor="formFirstName"
                       className="block text-sm/normal font-semibold text-gray-500 mb-2"
                     >
-                      First Name *
+                      {contactData.firstName}
                     </label>
                     <input
                       type="text"
                       className="block w-full text-sm rounded-md py-2 px-3 border outline-none border-gray-200 focus:border-gray-300 focus:ring-transparent"
                       id="formFirstName"
-                      placeholder="Your first name..."
+                      placeholder={contactData.placeholderFirstName}
                       required
                       ref={firstName}
                       onFocus={handleFocus}
@@ -100,13 +131,13 @@ const Contact = () => {
                       htmlFor="formLastName"
                       className="block text-sm/normal font-semibold text-gray-500 mb-2"
                     >
-                      Last Name
+                      {contactData.lastName}
                     </label>
                     <input
                       type="text"
                       className="block w-full text-sm rounded-md py-2 px-3 border outline-none border-gray-200 focus:border-gray-300 focus:ring-transparent"
                       id="formLastName"
-                      placeholder="Last first name..."
+                      placeholder={contactData.placeholderLastName}
                       required
                       ref={lastName}
                       onFocus={handleFocus}
@@ -118,13 +149,13 @@ const Contact = () => {
                       htmlFor="formEmail"
                       className="block text-sm/normal font-semibold text-gray-500 mb-2"
                     >
-                      Email Address *
+                      {contactData.emailAddress}
                     </label>
                     <input
                       type="email"
                       className="block w-full text-sm rounded-md py-2 px-3 border outline-none border-gray-200 focus:border-gray-300 focus:ring-transparent"
                       id="formEmail"
-                      placeholder="Your email..."
+                      placeholder={contactData.placeholderEmail}
                       required
                       ref={email}
                       onFocus={handleFocus}
@@ -136,13 +167,13 @@ const Contact = () => {
                       htmlFor="formPhone"
                       className="block text-sm/normal font-semibold text-gray-500 mb-2"
                     >
-                      Phone Number *
+                      {contactData.phoneNumber}
                     </label>
                     <input
                       type="text"
                       className="block w-full text-sm rounded-md py-2 px-3 border outline-none border-gray-200 focus:border-gray-300 focus:ring-transparent"
                       id="formPhone"
-                      placeholder="Type phone number..."
+                      placeholder={contactData.placeholderPhone}
                       required
                       ref={phone}
                       onFocus={handleFocus}
@@ -155,13 +186,13 @@ const Contact = () => {
                         htmlFor="formMessages"
                         className="block text-sm/normal font-semibold text-gray-500 mb-2"
                       >
-                        Messages *
+                        {contactData.message}
                       </label>
                       <textarea
                         className="block w-full text-sm rounded-md py-2 px-3 border outline-none border-gray-200 focus:border-gray-300 focus:ring-transparent"
                         id="formMessages"
                         rows={4}
-                        placeholder="Type messages..."
+                        placeholder={contactData.placeholderMessage}
                         required
                         ref={message}
                         onFocus={handleFocus}
@@ -175,7 +206,7 @@ const Contact = () => {
                     className="py-2 px-6 rounded-md text-white bg-gradient-to-r from-blue-600 to-blue-300"
                     onClick={handleSubmit}
                   >
-                    Send Messages
+                    {contactData.buttonSend}
                   </button>
                   <div className="text-red-500 font-semibold">
                     {errors[0]

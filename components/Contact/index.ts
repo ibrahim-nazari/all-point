@@ -1,2 +1,3 @@
-import Contact from "./Contact";
-export default Contact;
+import ContactWrapper from "./ContactWrapper";
+
+export default ContactWrapper;

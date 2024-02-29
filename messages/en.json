@@ -1,5 +1,6 @@
 {
   "navigations": {
+    "buttonGetQuoteText": "Get a quote",
     "menu1": {
       "title": "Cooler & Freezer",
       "link": "/",
@@ -78,45 +79,85 @@
     }
   },
 
-  "IndexPage": {
-    "title": "next-intl example",
-    "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes."
+  "topNavbar": {
+    "bussinessHour": "Business Hours",
+    "workDays": "Mon-Fri, 9am-5pm"
   },
-  "PathnamesPage": {
-    "title": "Pathnames",
-    "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>"
+  "heroSectionHome": {
+    "title": "Global Leader In Cold Storage Solutions",
+    "description": "All Point Thermal Systems combines premium-quality products with industry expertise. We’re proud to offer custom walk-in coolers, freezers, and combos that are built to last, designed for efficiency, and that can be shipped nationwide as well as internationally. Centrally located, we ship our range of products from two individual warehouses — so that our equipment reaches our customers faster. Request a free quote today today!",
+    "buttonViewProducts": "View Products",
+    "buttonRequestQuote": "Request a quote"
   },
-  "Error": {
-    "title": "Something went wrong!",
-    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
+  "aboutSectionHome": {
+    "title": "Efficiency And Expertise: Your Trusted Partner In Cold Storage",
+    "description": "Our mission at All Point Thermal Systems is providing the most environmentally responsible and reliable cold storage solutions with understanding, care, and trust. All Point Thermal Systems combines premium-quality products with industry expertise. We’re proud to offer walk in coolers and freezers that are built to last, designed for efficiency, and that can be shipped nationwide. Centrally located in Dallas, TX., we ship our range of products from two individual warehouses — so that our equipment reaches our customers faster. With custom-built, custom-designed options that boast a range of industry-trusted qualifications, our coolers, freezers, and walk-in cooler and freezer combos are perfectly suited for restaurants, schools, hotels, retailers, warehouses, florists, laboratories, and more. We strive to go above and beyond by not only offering top-of-the-line equipment, but also by ensuring our customers always have access to our team of trusted experts for support.",
+    "buttonContactText": "Contact Us",
+    "whoWeAre": "Who We Are ?",
+    "secondTitle": "Our Mission, Products, \n and Services for Your Diverse Needs",
+    "especialAboutUs": "Reliable cold storage solutions, nationwide shipping. Custom-built for restaurants, hotels, and more.",
+    "shipping": "Shipping",
+    "shippingDescription": "Shipping available Internationally and across the United States",
+    "quality": "Quality",
+    "qualityDescription": "Certified Equipment",
+    "support": "Support",
+    "supportDescription": "Support 24 hours 7 days a week"
   },
-  "NotFoundPage": {
-    "title": "Page not found",
-    "description": "Please double-check the browser address bar or use the navigation to go to a known page."
+  "productHome": {
+    "title1": "Product Applications",
+    "title2": "Explore Coolers & Freezers"
   },
-  "LocaleLayout": {
-    "title": "next-intl example"
+  "blog1Home": {
+    "title": "A Reliable Cold Storage Solutions Provider with Proven Results",
+    "description1": "Cold chain warehouse solutions are essential for industries like food, pharmaceuticals, and art preservation, as they keep their goods fresh and quality-controlled in a competitive market. At All Point Thermal Systems, we provide the best walk-in coolers and freezers, which are important parts of the cold chain logistics. What is Cold Chain Warehousing? Cold chain warehousing means storing products that need a specific temperature in a regulated environment. This protects their quality, lifespan, and safety standards. Our solutions serve a wide range of needs, from keeping food items fresh to preserving medical supplies​.",
+    "subheader1": "State-of-the-art Technology for Ideal Storage:",
+    "description2": "Using the latest technology, our walk-in coolers and freezers have excellent temperature control and energy efficiency. This not only preserves the quality of stored products but also lowers operational costs.",
+    "subheader2": "Personalized Solutions:",
+    "description3": "We understand that each business has different needs, so we offer custom-made drive-in units. Whether you need a small cooler for a low-scale operation or a large freezer for a big warehouse, our team is skilled at creating solutions that fit your requirements.",
+    "subheader3": "Safety and Compliance:",
+    "description4": "In the field of cold storage, following health and safety regulations is very important. Our products are made to meet high industry standards, ensuring that your business works within legal and ethical limits with various package options available.",
+    "subheader4": "The Cold Chain Logistics:",
+    "description5": "Our solutions are part of the wider cold chain logistics network. From the source of production to the final consumer, our walk-in units help to keep the quality and safety of products during storage and transportation​.",
+    "subheader5": "Why Choose All Point Thermal Systems?",
+    "description6": "We care about customer satisfaction, so we offer not only products but also complete solutions. From installation to maintenance, our team of experts is ready to provide excellent service. All Point Thermal Systems is committed to helping your business with effective, dependable, and adaptable cold chain warehouse solutions. Contact us to find out how we can improve your storage and logistics operations."
   },
-  "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+  "blog2Home": {
+    "title": "A Reliable Cold Storage Solutions Provider with Proven Results",
+    "description1": "Cold chain warehouse solutions are essential for industries like food, pharmaceuticals, and art preservation, as they keep their goods fresh and quality-controlled in a competitive market. At All Point Thermal Systems, we provide the best walk-in coolers and freezers, which are important parts of the cold chain logistics. What is Cold Chain Warehousing? Cold chain warehousing means storing products that need a specific temperature in a regulated environment. This protects their quality, lifespan, and safety standards. Our solutions serve a wide range of needs, from keeping food items fresh to preserving medical supplies​.",
+    "subheader1": "State-of-the-art Technology for Ideal Storage:",
+    "description2": "Using the latest technology, our walk-in coolers and freezers have excellent temperature control and energy efficiency. This not only preserves the quality of stored products but also lowers operational costs.",
+    "subheader2": "Personalized Solutions:",
+    "description3": "We understand that each business has different needs, so we offer custom-made drive-in units. Whether you need a small cooler for a low-scale operation or a large freezer for a big warehouse, our team is skilled at creating solutions that fit your requirements.",
+    "subheader3": "Safety and Compliance:",
+    "description4": "In the field of cold storage, following health and safety regulations is very important. Our products are made to meet high industry standards, ensuring that your business works within legal and ethical limits with various package options available.",
+    "subheader4": "The Cold Chain Logistics:",
+    "description5": "Our solutions are part of the wider cold chain logistics network. From the source of production to the final consumer, our walk-in units help to keep the quality and safety of products during storage and transportation​.",
+    "subheader5": "Why Choose All Point Thermal Systems?",
+    "description6": "We care about customer satisfaction, so we offer not only products but also complete solutions. From installation to maintenance, our team of experts is ready to provide excellent service. All Point Thermal Systems is committed to helping your business with effective, dependable, and adaptable cold chain warehouse solutions. Contact us to find out how we can improve your storage and logistics operations."
   },
-  "Navigation": {
-    "home": "Home",
-    "pathnames": "Pathnames"
+  "contactHome": {
+    "title": "Get in touch with us",
+    "subTitle": "You can expect a reply from us in 24 hours.",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "addressValue": "554 Fard Street, Fard Avenue, CA 9437",
+    "firstName": "First Name *",
+    "lastName": "Last Name ",
+    "emailAddress": "Email Address *",
+    "phoneNumber": "Phone Number *",
+    "message": "Message *",
+    "placeholderFirstName": "Your first name...",
+    "placeholderLastName": "Your last name...",
+    "placeholderEmail": "Your email...",
+    "placeholderPhone": "Your phone...",
+    "placeholderMessage": "Type message...",
+    "buttonSend": "Send message"
   },
-  "PageLayout": {
-    "links": {
-      "docs": {
-        "title": "Docs",
-        "description": "Learn more about next-intl in the official docs.",
-        "href": "https://next-intl-docs.vercel.app/"
-      },
-      "source": {
-        "title": "Source code",
-        "description": "Browse the source code of this example on GitHub.",
-        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router"
-      }
-    }
+  "footer": {
+    "aboutDescription": "All Point Thermal Systems provides custom walk-in coolers and freezers with quality and efficiency. We serve various industries from two Dallas, TX. warehouses and have great customer service. We also donate to local food banks.",
+    "rightReserved": "@2024 All Point Thermal Systems All rights reserved ",
+    "privacyPolicy": "Privacy & Policy",
+    "termCondition": "Terms & Condition"
   }
 }

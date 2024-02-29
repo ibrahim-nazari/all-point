@@ -74,8 +74,38 @@ export interface NavigationsType {
 }
 
 export interface ProductType {
-  title: string;
+  title: { en: string; es: string };
   image: string;
   slug: string;
   id: number;
+}
+export interface HeroContentType {
+  title: string;
+  description: string;
+  buttonViewProducts: string;
+  buttonRequestQuote: string;
+}
+export interface AboutContentType {
+  title: string;
+  description: string;
+  buttonContactText: string;
+}
+export interface ContactType {
+  title: string;
+  subTitle: string;
+  email: string;
+  phone: string;
+  address: string;
+  addressValue: string;
+  firstName: string;
+  lastName: string;
+  emailAddress: string;
+  phoneNumber: string;
+  message: string;
+  placeholderFirstName: string;
+  placeholderLastName: string;
+  placeholderEmail: string;
+  placeholderPhone: string;
+  placeholderMessage: string;
+  buttonSend: string;
 }

@@ -5,9 +5,10 @@ import { NavigationsType } from "@types";
 import { useEffect, useState } from "react";
 interface Props {
   navigations: NavigationsType[];
+  buttonGetQuoteText: string;
 }
 
-const NavBar = ({ navigations }: Props) => {
+const NavBar = ({ navigations, buttonGetQuoteText }: Props) => {
   const [showTopNav, setShowTopNav] = useState(true);
   const handleScroll = () => {
     if (window.scrollY >= 100) {
@@ -54,7 +55,7 @@ const NavBar = ({ navigations }: Props) => {
               href="/get-quote"
               className="py-1 px-2 lg:py-2 lg:px-5  inline-block font-semibold tracking-wide border align-middle duration-500 text-sm lg:text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md"
             >
-              Get A Quote
+              {buttonGetQuoteText}
             </Link>
           </li>
         </ul>

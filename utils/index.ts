@@ -117,3 +117,11 @@ export const extractNavigation = (t: any) => {
 
   return navigations;
 };
+export const extractHeroSection = (t: any) => {
+  const title = t("title");
+  const description = t("description");
+  const buttonViewProducts = t("buttonViewProducts");
+  const buttonRequestQuote = t("buttonRequestQuote");
+
+  return { title, description, buttonViewProducts, buttonRequestQuote };
+};

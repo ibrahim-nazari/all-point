@@ -7,8 +7,10 @@ import {
 import Link from "next/link";
 import React from "react";
 import ShippingIcon from "./ShippingIcon";
+import { useTranslations } from "next-intl";
 
 const About = () => {
+  const t = useTranslations("aboutSectionHome");
   return (
     <section className="relative md:py-24 py-16">
       <div className="container relative">
@@ -41,32 +43,14 @@ const About = () => {
           <div className="md:col-span-7">
             <div className="lg:ms-4">
               <h4 className="mb-6 md:text-3xl text-2xl lg:leading-normal leading-normal font-medium">
-                Efficiency And Expertise:
-                <br /> Your Trusted Partner In Cold Storage
+                {t("title")}
               </h4>
-              <p className="text-slate-800 max-w-xl">
-                Our mission at International Coolers™ is providing the most
-                environmentally responsible and reliable cold storage solutions
-                with understanding, care, and trust. International Coolers™
-                combines premium-quality products with industry expertise. We’re
-                proud to offer walk in coolers and freezers that are built to
-                last, designed for efficiency, and that can be shipped
-                nationwide. Centrally located in Dallas, TX., we ship our range
-                of products from two individual warehouses — so that our
-                equipment reaches our customers faster. With custom-built,
-                custom-designed options that boast a range of industry-trusted
-                qualifications, our coolers, freezers, and walk-in cooler and
-                freezer combos are perfectly suited for restaurants, schools,
-                hotels, retailers, warehouses, florists, laboratories, and more.
-                We strive to go above and beyond by not only offering
-                top-of-the-line equipment, but also by ensuring our customers
-                always have access to our team of trusted experts for support.
-              </p>
+              <p className="text-slate-800 max-w-xl">{t("description")}</p>
               <Link
                 href="/contact-us"
                 className="py-2 px-4 font-semibold tracking-wide border align-middle duration-500 text-base text-center bg-indigo-600 hover:bg-indigo-700 border-indigo-600 hover:border-indigo-700 text-white rounded-md mt-3 flex items-center w-fit"
               >
-                Contact Us
+                {t("buttonContactText")}
                 <ArrowRightIcon className="h-5 w-5 ml-3" />
               </Link>
             </div>
@@ -80,16 +64,14 @@ const About = () => {
       <div className="container relative md:mt-24 mt-16">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h6 className="text-indigo-600 text-sm font-bold uppercase mb-2">
-            Who We Are ?
+            {t("whoWeAre")}
           </h6>
           <h3 className="mb-4 md:text-3xl md:leading-normal text-2xl leading-normal font-semibold">
-            Our Mission, Products,
-            <br /> and Services for Your Diverse Needs
+            {t("secondTitle")}
           </h3>
 
           <p className="text-slate-400 max-w-xl mx-auto">
-            Reliable cold storage solutions, nationwide shipping. Custom-built
-            for restaurants, hotels, and more.
+            {t("especialAboutUs")}
           </p>
         </div>
         {/* <!--end grid--> */}
@@ -99,10 +81,10 @@ const About = () => {
             <ShippingIcon />
 
             <div className="mt-6">
-              <h3 className="font-bold text-2xl uppercase">Shipping</h3>
+              <h3 className="font-bold text-2xl uppercase"> {t("shipping")}</h3>
 
               <p className="text-slate-400 mt-4 max-w-sm">
-                Shipping available Internationally and across the United States
+                {t("shippingDescription")}
               </p>
             </div>
           </div>
@@ -112,9 +94,9 @@ const About = () => {
             <Cog8ToothIcon className="h-10 w-10" />
 
             <div className="mt-6">
-              <h3 className="font-bold text-2xl uppercase">Quality</h3>
+              <h3 className="font-bold text-2xl uppercase"> {t("quality")}</h3>
 
-              <p className="text-slate-400 mt-4">Certified Equipment</p>
+              <p className="text-slate-400 mt-4"> {t("qualityDescription")}</p>
             </div>
           </div>
           {/* <!-- Quality End --> */}
@@ -122,9 +104,9 @@ const About = () => {
             <PhoneIcon className="h-10 w-10" />
 
             <div className="mt-6">
-              <h3 className="font-bold text-2xl uppercase">Support</h3>
+              <h3 className="font-bold text-2xl uppercase"> {t("support")}</h3>
 
-              <p className="text-slate-400 mt-4">Certified Equipment</p>
+              <p className="text-slate-400 mt-4">{t("supportDescription")}</p>
             </div>
           </div>
 

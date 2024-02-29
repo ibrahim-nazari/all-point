@@ -1,12 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import { useLocale } from "next-intl";
+import { useRouter } from "next/navigation";
+import React from "react";
 
 const LanguageSelector = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
+  const router = useRouter();
+  const isActiveLocal = useLocale();
   const handleLanguageChange = async (e) => {
-    console.log(e.target.value);
-    setIsOpen(false);
+    router.replace(`/${e.target.value}`);
   };
 
   const languages = [
@@ -16,9 +17,13 @@ const LanguageSelector = () => {
 
   return (
     <div className="z-50 fixed top-1 right-2">
-      <select className="outline-none " onChange={handleLanguageChange}>
+      <select
+        defaultValue={isActiveLocal}
+        className="outline-none "
+        onChange={handleLanguageChange}
+      >
         {languages.map((language) => (
-          <option key={language.key} className="my-5">
+          <option key={language.key} value={language.key} className="my-5">
             {language.label}
           </option>
         ))}

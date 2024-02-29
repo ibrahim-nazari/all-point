@@ -1,122 +1,165 @@
 {
   "navigations": {
+    "buttonGetQuoteText": "Get a quote",
     "menu1": {
-      "title": "Cooler & Freezer",
+      "title": "Refrigerador y congelador",
       "link": "/",
       "submenu": {
         "submenu1": {
-          "title": "Walk-in Coolers",
+          "title": "Refrigeradores de entrada",
           "link": "/"
         },
         "submenu2": {
-          "title": "Walk in Freezer",
+          "title": "Congelador de entrada",
           "link": "/"
         },
         "submenu3": {
-          "title": "Walk-in Cooler & Freezer Combo",
+          "title": "Combo de refrigerador y congelador de entrada",
           "link": "/"
         },
         "submenu4": {
-          "title": "Convenience Store Cooler",
+          "title": "Refrigerador de tienda de conveniencia",
           "link": "/"
         },
         "submenu5": {
-          "title": "Drive-in Cooler & Freezer",
+          "title": "Refrigerador y congelador de entrada para vehículos",
           "link": "/"
         }
       }
     },
     "menu2": {
-      "title": "By Industry",
+      "title": "Por industria",
       "link": "/",
       "submenu": {
         "submenu1": {
-          "title": "Grocery Store Walk-In Coolers and Freezers",
+          "title": "Refrigeradores y congeladores de entrada para tiendas de comestibles",
           "link": "/"
         },
         "submenu2": {
-          "title": "Food Manufacturing and Processing",
+          "title": "Fabricación y procesamiento de alimentos",
           "link": "/"
         },
         "submenu3": {
-          "title": "Food Service",
+          "title": "Servicio de alimentos",
           "link": "/"
         },
         "submenu4": {
-          "title": "Food Distribution",
+          "title": "Distribución de alimentos",
           "link": "/"
         },
         "submenu5": {
-          "title": "Scientific",
+          "title": "Científico",
           "link": "/"
         },
         "submenu6": {
-          "title": "Convenience Store",
+          "title": "Tienda de conveniencia",
           "link": "/"
         },
         "submenu7": {
-          "title": "Floral Coolers",
+          "title": "Refrigeradores de flores",
           "link": "/"
         },
         "submenu8": {
-          "title": "Cold Storage Warehouse",
+          "title": "Almacén de almacenamiento en frío",
           "link": "/"
         },
         "submenu9": {
-          "title": "Equipment Enclosures",
+          "title": "Recintos de equipos",
           "link": "/"
         }
       }
     },
     "menu3": {
-      "title": "About Us",
+      "title": "Sobre nosotros",
       "link": "/"
     },
     "menu4": {
-      "title": "Contact Us",
+      "title": "Contáctenos",
       "link": "/"
     }
   },
 
-  "IndexPage": {
-    "title": "next-intl example",
-    "description": "This is a basic example that demonstrates the usage of <code>next-intl</code> with the Next.js App Router. Try changing the locale in the top right corner and see how the content changes."
+  "topNavbar": {
+    "bussinessHour": "Horario de atención",
+    "workDays": "De lunes a viernes, de 9am - 5pm"
   },
-  "PathnamesPage": {
-    "title": "Pathnames",
-    "description": "<p>The pathnames are internationalized too.</p><p>If you're using the default language English, you'll see <code>/en/pathnames</code> in the browser address bar on this page.</p><p>If you change the locale to German, the URL is localized accordingly (<code>/de/pfadnamen</code>).</p>"
+
+  "heroSectionHome": {
+    "title": "Líder Global en Soluciones de Almacenamiento en Frío",
+    "description": "All Point Thermal Systems combina productos de alta calidad con experiencia en la industria. Estamos orgullosos de ofrecer cámaras frigoríficas personalizadas, congeladores y combinaciones que están diseñadas para durar y ser eficientes, y que pueden enviarse a nivel nacional e internacional. Con ubicación central, enviamos nuestra gama de productos desde dos almacenes individuales, para que nuestro equipo llegue más rápido a nuestros clientes. ¡Solicita hoy mismo un presupuesto gratuito!",
+    "buttonViewProducts": "Ver Productos",
+    "buttonRequestQuote": "Solicitar un presupuesto"
   },
-  "Error": {
-    "title": "Something went wrong!",
-    "description": "<p>We've unfortunately encountered an error.</p><p>You can try to <retry>reload the page</retry> you were visiting.</p>"
+
+  "aboutSectionHome": {
+    "title": "Eficiencia y Experiencia: Tu Socio de Confianza en Almacenamiento en Frío",
+    "description": "Nuestra misión en All Point Thermal Systems es proporcionar soluciones de almacenamiento en frío ambientalmente responsables y confiables, con comprensión, cuidado y confianza. All Point Thermal Systems combina productos de alta calidad con experiencia en la industria. Estamos orgullosos de ofrecer cámaras frigoríficas y congeladores que están diseñados para durar y ser eficientes, y que pueden enviarse a nivel nacional. Con ubicación central en Dallas, TX, enviamos nuestra gama de productos desde dos almacenes individuales, para que nuestro equipo llegue más rápido a nuestros clientes. Con opciones personalizadas y diseñadas a medida que cuentan con una variedad de calificaciones de confianza en la industria, nuestras cámaras frigoríficas, congeladores y combinaciones de cámaras frigoríficas y congeladores son perfectamente adecuadas para restaurantes, escuelas, hoteles, minoristas, almacenes, floristerías, laboratorios y más. Nos esforzamos por ir más allá al no solo ofrecer equipos de primera línea, sino también al garantizar que nuestros clientes siempre tengan acceso a nuestro equipo de expertos de confianza para recibir apoyo.",
+    "buttonContactText": "Contáctanos",
+    "whoWeAre": "¿Quiénes Somos?",
+    "secondTitle": "Nuestra Misión, Productos y Servicios para tus Diversas Necesidades",
+    "especialAboutUs": "Soluciones confiables de almacenamiento en frío, envío a nivel nacional. Personalizadas para restaurantes, hoteles y más.",
+    "shipping": "Envío",
+    "shippingDescription": "Envío disponible a nivel internacional y en todo Estados Unidos",
+    "quality": "Calidad",
+    "qualityDescription": "Equipo certificado",
+    "support": "Soporte",
+    "supportDescription": "Soporte las 24 horas, los 7 días de la semana"
   },
-  "NotFoundPage": {
-    "title": "Page not found",
-    "description": "Please double-check the browser address bar or use the navigation to go to a known page."
+  "productHome": {
+    "title1": "Product Applications",
+    "title2": "Explore Coolers & Freezers"
   },
-  "LocaleLayout": {
-    "title": "next-intl example"
+  "blog1Home": {
+    "title": "A Reliable Cold Storage Solutions Provider with Proven Results",
+    "description1": "Cold chain warehouse solutions are essential for industries like food, pharmaceuticals, and art preservation, as they keep their goods fresh and quality-controlled in a competitive market. At All Point Thermal Systems, we provide the best walk-in coolers and freezers, which are important parts of the cold chain logistics. What is Cold Chain Warehousing? Cold chain warehousing means storing products that need a specific temperature in a regulated environment. This protects their quality, lifespan, and safety standards. Our solutions serve a wide range of needs, from keeping food items fresh to preserving medical supplies​.",
+    "subheader1": "State-of-the-art Technology for Ideal Storage:",
+    "description2": "Using the latest technology, our walk-in coolers and freezers have excellent temperature control and energy efficiency. This not only preserves the quality of stored products but also lowers operational costs.",
+    "subheader2": "Personalized Solutions:",
+    "description3": "We understand that each business has different needs, so we offer custom-made drive-in units. Whether you need a small cooler for a low-scale operation or a large freezer for a big warehouse, our team is skilled at creating solutions that fit your requirements.",
+    "subheader3": "Safety and Compliance:",
+    "description4": "In the field of cold storage, following health and safety regulations is very important. Our products are made to meet high industry standards, ensuring that your business works within legal and ethical limits with various package options available.",
+    "subheader4": "The Cold Chain Logistics:",
+    "description5": "Our solutions are part of the wider cold chain logistics network. From the source of production to the final consumer, our walk-in units help to keep the quality and safety of products during storage and transportation​.",
+    "subheader5": "Why Choose All Point Thermal Systems?",
+    "description6": "We care about customer satisfaction, so we offer not only products but also complete solutions. From installation to maintenance, our team of experts is ready to provide excellent service. All Point Thermal Systems is committed to helping your business with effective, dependable, and adaptable cold chain warehouse solutions. Contact us to find out how we can improve your storage and logistics operations."
   },
-  "LocaleSwitcher": {
-    "label": "Change language",
-    "locale": "{locale, select, de {🇩🇪 Deutsch} en {🇺🇸 English} other {Unknown}}"
+  "blog2Home": {
+    "title": "A Reliable Cold Storage Solutions Provider with Proven Results",
+    "description1": "Cold chain warehouse solutions are essential for industries like food, pharmaceuticals, and art preservation, as they keep their goods fresh and quality-controlled in a competitive market. At All Point Thermal Systems, we provide the best walk-in coolers and freezers, which are important parts of the cold chain logistics. What is Cold Chain Warehousing? Cold chain warehousing means storing products that need a specific temperature in a regulated environment. This protects their quality, lifespan, and safety standards. Our solutions serve a wide range of needs, from keeping food items fresh to preserving medical supplies​.",
+    "subheader1": "State-of-the-art Technology for Ideal Storage:",
+    "description2": "Using the latest technology, our walk-in coolers and freezers have excellent temperature control and energy efficiency. This not only preserves the quality of stored products but also lowers operational costs.",
+    "subheader2": "Personalized Solutions:",
+    "description3": "We understand that each business has different needs, so we offer custom-made drive-in units. Whether you need a small cooler for a low-scale operation or a large freezer for a big warehouse, our team is skilled at creating solutions that fit your requirements.",
+    "subheader3": "Safety and Compliance:",
+    "description4": "In the field of cold storage, following health and safety regulations is very important. Our products are made to meet high industry standards, ensuring that your business works within legal and ethical limits with various package options available.",
+    "subheader4": "The Cold Chain Logistics:",
+    "description5": "Our solutions are part of the wider cold chain logistics network. From the source of production to the final consumer, our walk-in units help to keep the quality and safety of products during storage and transportation​.",
+    "subheader5": "Why Choose All Point Thermal Systems?",
+    "description6": "We care about customer satisfaction, so we offer not only products but also complete solutions. From installation to maintenance, our team of experts is ready to provide excellent service. All Point Thermal Systems is committed to helping your business with effective, dependable, and adaptable cold chain warehouse solutions. Contact us to find out how we can improve your storage and logistics operations."
   },
-  "Navigation": {
-    "home": "Home",
-    "pathnames": "Pathnames"
+  "contactHome": {
+    "title": "Ponte en contacto con nosotros",
+    "subTitle": "Puedes esperar una respuesta de nuestra parte en 24 horas.",
+    "email": "Correo electrónico",
+    "phone": "Teléfono",
+    "address": "Dirección",
+    "addressValue": "554 Calle Fard, Avenida Fard, CA 9437",
+    "firstName": "Nombre *",
+    "lastName": "Apellido",
+    "emailAddress": "Dirección de correo electrónico *",
+    "phoneNumber": "Número de teléfono *",
+    "message": "Mensaje *",
+    "placeholderFirstName": "Tu nombre...",
+    "placeholderLastName": "Tu apellido...",
+    "placeholderEmail": "Tu correo electrónico...",
+    "placeholderPhone": "Tu teléfono...",
+    "placeholderMessage": "Escribe tu mensaje...",
+    "buttonSend": "Enviar mensaje"
   },
-  "PageLayout": {
-    "links": {
-      "docs": {
-        "title": "Docs",
-        "description": "Learn more about next-intl in the official docs.",
-        "href": "https://next-intl-docs.vercel.app/"
-      },
-      "source": {
-        "title": "Source code",
-        "description": "Browse the source code of this example on GitHub.",
-        "href": "https://github.com/amannn/next-intl/tree/main/examples/example-app-router"
-      }
-    }
+  "footer": {
+    "aboutDescription": "All Point Thermal Systems ofrece cámaras frigoríficas y congeladores personalizados con calidad y eficiencia. Atendemos a diversas industrias desde nuestros. y brindamos un excelente servicio al cliente. También donamos a bancos de alimentos locales.",
+    "rightReserved": "@2024 Todos los derechos reservados por All Point Thermal Systems",
+    "privacyPolicy": "Política de privacidad",
+    "termCondition": "Términos y condiciones"
   }
 }
