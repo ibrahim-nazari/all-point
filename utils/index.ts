@@ -85,7 +85,12 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
 };
 
 export const extractNavigation = (t: any) => {
-  const nav1 = ["menu1", "menu2", "menu3", "menu4"] as const;
+  const nav1 = [
+    { name: "menu1", submenu: true },
+    { name: "menu2", submenu: true },
+    { name: "menu3", submenu: false },
+    { name: "menu4", submenu: false },
+  ] as const;
   const nav2 = [
     "submenu1",
     "submenu2",
@@ -93,23 +98,21 @@ export const extractNavigation = (t: any) => {
     "submenu4",
     "submenu5",
   ] as const;
-  let navigations: NavigationsType[] = nav1.map((key, indx) => {
-    const hasSubMenu =
-      t(`${key}.submenu.submenu1.title`) !=
-      `navigations.${key}.submenu.submenu1.title`;
+  let navigations: NavigationsType[] = nav1.map((nav, indx) => {
+    const name = nav.name;
 
-    const submenu = hasSubMenu
+    const submenu = nav.submenu
       ? nav2.map((subkey, index) => {
           return {
-            title: t(`${key}.submenu.${subkey}.title`),
-            link: t(`${key}.submenu.${subkey}.link`),
+            title: t(`${name}.submenu.${subkey}.title`),
+            link: t(`${name}.submenu.${subkey}.link`),
             id: `${index + 1}sub`,
           };
         })
       : [];
     return {
-      title: t(`${key}.title`),
-      link: t(`${key}.link`),
+      title: t(`${name}.title`),
+      link: t(`${name}.link`),
       id: `${indx + 1}`,
       submenu,
     };

@@ -1,6 +1,6 @@
 {
   "navigations": {
-    "buttonGetQuoteText": "Get a quote",
+    "buttonGetQuoteText": "Obtener un presupuesto",
     "menu1": {
       "title": "Refrigerador y congelador",
       "link": "/",
@@ -71,11 +71,11 @@
     },
     "menu3": {
       "title": "Sobre nosotros",
-      "link": "/"
+      "link": "/about"
     },
     "menu4": {
       "title": "Contáctenos",
-      "link": "/"
+      "link": "/contact"
     }
   },
 

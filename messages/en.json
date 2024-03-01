@@ -71,11 +71,11 @@
     },
     "menu3": {
       "title": "About Us",
-      "link": "/"
+      "link": "/about"
     },
     "menu4": {
       "title": "Contact Us",
-      "link": "/"
+      "link": "/contact"
     }
   },
 

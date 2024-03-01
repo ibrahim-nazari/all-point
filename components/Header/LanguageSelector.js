@@ -1,13 +1,14 @@
 "use client";
 import { useLocale } from "next-intl";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
 const LanguageSelector = () => {
   const router = useRouter();
+  const pathname = usePathname();
   const isActiveLocal = useLocale();
   const handleLanguageChange = async (e) => {
-    router.replace(`/${e.target.value}`);
+    router.replace(`/${e.target.value}${pathname.slice(3)}`);
   };
 
   const languages = [

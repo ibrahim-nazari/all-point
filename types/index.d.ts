@@ -1,3 +1,4 @@
+import { AppPathnames } from "@config";
 import { MouseEventHandler } from "react";
 
 export interface CarProps {
@@ -68,7 +69,7 @@ export interface SearchManuFacturerProps {
 }
 export interface NavigationsType {
   title: string;
-  link: string;
+  link: AppPathnames;
   id: string;
   submenu: { title: string; link: string; id: string }[];
 }

@@ -1,5 +1,6 @@
 "use client";
-import Link from "next/link";
+
+import { Link } from "@navigation";
 import ToggleMenu from "./ToggleMenu";
 import { NavigationsType } from "@types";
 import { useEffect, useState } from "react";
