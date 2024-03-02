@@ -1,4 +1,14 @@
-import { CarProps, FilterProps, NavigationsType } from "@types";
+import {
+  EnvelopeIcon,
+  MapPinIcon,
+  PhoneIcon,
+} from "@heroicons/react/24/outline";
+import {
+  CarProps,
+  ContactInfoType,
+  FilterProps,
+  NavigationsType,
+} from "@types";
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
   const basePricePerDay = 50; // Base rental price per day in dollars
@@ -127,4 +137,46 @@ export const extractHeroSection = (t: any) => {
   const buttonRequestQuote = t("buttonRequestQuote");
 
   return { title, description, buttonViewProducts, buttonRequestQuote };
+};
+export const extractContactInfo = (t: any) => {
+  const menus = [
+    {
+      name: "contact1",
+      linkText: false,
+      Icon: EnvelopeIcon,
+      value: "ibrahimnazaryweb@gmail.com",
+      id: 1,
+      link: "mailto:ibrahimnazaryweb@gmail.com",
+    },
+    {
+      name: "contact2",
+      linkText: false,
+      Icon: PhoneIcon,
+      value: "(+1) 434 342 232",
+      id: 2,
+      link: "tel:+1434 342 232",
+    },
+    {
+      name: "contact3",
+      linkText: true,
+      Icon: MapPinIcon,
+      value: "",
+      id: 3,
+      link: `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.1664532162126!2d-74.0005234880454!3d40.714352071274035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a26f7cdb6db%3A0xdbdb03722e7ad673!2sDoyers%20St%2C%20New%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1709214524532!5m2!1sen!2s`,
+    },
+  ] as const;
+  let contacts: ContactInfoType[] = menus.map((menu, indx) => {
+    const name = menu.name;
+    const LinkText = menu.linkText ? t(`${name}.linkText`) : null;
+    return {
+      Icon: menu.Icon,
+      label: t(`${name}.label`),
+      title: t(`${name}.title`),
+      value: LinkText || menu.value,
+      link: menu.link,
+      id: menu.id,
+    };
+  });
+
+  return contacts;
 };

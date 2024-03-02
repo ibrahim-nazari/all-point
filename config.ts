@@ -7,6 +7,7 @@ export const pathnames = {
   "/contact": "/contact",
   "/get-quote": "/get-quote",
   "/about": "/about",
+  "/product": "/product",
   "/product/[slug]": "/product/[slug]",
 } satisfies Pathnames<typeof locales>;
 

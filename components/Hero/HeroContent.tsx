@@ -1,4 +1,5 @@
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import { Link } from "@navigation";
 import { HeroContentType } from "@types";
 import React from "react";
 const infoObject = {
@@ -21,14 +22,18 @@ const HeroContent = ({ heroSectionData }: Props) => {
         <p className="font-semibold text-white text-md sm:text-lg">
           {heroSectionData.description}
         </p>
-        <button className="px-3 py-2 sm:px-7 sm:py-3 text-white cursor-pointer font-semibold bg-blue-600  w-fit my-5 sm:my-10 rounded-md hover:bg-blue-500 flex items-center">
-          {heroSectionData.buttonViewProducts}
-          <ArrowRightIcon className="h-5 w-5 ml-3" />
-        </button>
-        <button className="px-3 py-2 sm:px-5 sm:py-3 text-white cursor-pointer font-semibold bg-blue-600  w-fit  rounded-md hover:bg-blue-500 flex items-center">
-          {heroSectionData.buttonRequestQuote}
-          <ArrowRightIcon className="h-5 w-5 ml-3" />
-        </button>
+        <Link href="/product">
+          <button className="px-3 py-2 sm:px-7 sm:py-3 text-white cursor-pointer font-semibold bg-blue-600  w-fit my-5 sm:my-10 rounded-md hover:bg-blue-500 flex items-center">
+            {heroSectionData.buttonViewProducts}
+            <ArrowRightIcon className="h-5 w-5 ml-3" />
+          </button>
+        </Link>
+        <Link href="/get-quote">
+          <button className="px-3 py-2 sm:px-5 sm:py-3 text-white cursor-pointer font-semibold bg-blue-600  w-fit  rounded-md hover:bg-blue-500 flex items-center">
+            {heroSectionData.buttonRequestQuote}
+            <ArrowRightIcon className="h-5 w-5 ml-3" />
+          </button>
+        </Link>
       </div>
     </div>
   );

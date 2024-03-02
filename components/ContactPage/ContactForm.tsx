@@ -1,9 +1,5 @@
 "use client";
-import {
-  EnvelopeIcon,
-  MapPinIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/outline";
+
 import { ContactType } from "@types";
 import React, { useRef, useState } from "react";
 import { object, string, mixed } from "yup";
@@ -19,29 +15,6 @@ interface Props {
   contactData: ContactType;
 }
 const ContactForm = ({ contactData }: Props) => {
-  const contactinfo = [
-    {
-      label: contactData.email,
-      Icon: EnvelopeIcon,
-      value: "ibrahimnazaryweb@gmail.com",
-      id: 1,
-      link: "mailto:ibrahimnazaryweb@gmail.com",
-    },
-    {
-      label: contactData.phone,
-      Icon: PhoneIcon,
-      value: "(+1) 434 342 232",
-      id: 2,
-      link: "tel:+1434 342 232",
-    },
-    {
-      label: contactData.address,
-      Icon: MapPinIcon,
-      value: contactData.addressValue,
-      id: 2,
-      link: "google map link",
-    },
-  ];
   const firstName = useRef<HTMLInputElement>(null);
   const lastName = useRef<HTMLInputElement>(null);
   const email = useRef<HTMLInputElement>(null);

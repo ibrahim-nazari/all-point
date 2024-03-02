@@ -161,5 +161,20 @@
     "rightReserved": "@2024 Todos los derechos reservados por All Point Thermal Systems",
     "privacyPolicy": "Política de privacidad",
     "termCondition": "Términos y condiciones"
+  },
+  "contactInfo": {
+    "contact1": {
+      "label": "Email",
+      "title": "The phrasal sequence of the is now so that many campaign and benefit"
+    },
+    "contact2": {
+      "label": "Phone",
+      "title": "The phrasal sequence of the is now so that many campaign and benefit"
+    },
+    "contact3": {
+      "label": "Address",
+      "title": "554 Fard Street, Fard Avenue, CA 9437",
+      "linkText": "View on Google map"
+    }
   }
 }

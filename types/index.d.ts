@@ -1,5 +1,5 @@
 import { AppPathnames } from "@config";
-import { MouseEventHandler } from "react";
+import React, { MouseEventHandler } from "react";
 
 export interface CarProps {
   city_mpg: number;
@@ -109,4 +109,13 @@ export interface ContactType {
   placeholderPhone: string;
   placeholderMessage: string;
   buttonSend: string;
+}
+export interface ContactInfoType {
+  title: string;
+  label: string;
+  linkText?: string;
+  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>> | any;
+  value: string;
+  link: string;
+  id: number;
 }
