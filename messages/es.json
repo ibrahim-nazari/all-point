@@ -93,7 +93,7 @@
 
   "aboutSectionHome": {
     "title": "Eficiencia y Experiencia: Tu Socio de Confianza en Almacenamiento en Frío",
-    "description": "Nuestra misión en All Point Thermal Systems es proporcionar soluciones de almacenamiento en frío ambientalmente responsables y confiables, con comprensión, cuidado y confianza. All Point Thermal Systems combina productos de alta calidad con experiencia en la industria. Estamos orgullosos de ofrecer cámaras frigoríficas y congeladores que están diseñados para durar y ser eficientes, y que pueden enviarse a nivel nacional. Con ubicación central en Dallas, TX, enviamos nuestra gama de productos desde dos almacenes individuales, para que nuestro equipo llegue más rápido a nuestros clientes. Con opciones personalizadas y diseñadas a medida que cuentan con una variedad de calificaciones de confianza en la industria, nuestras cámaras frigoríficas, congeladores y combinaciones de cámaras frigoríficas y congeladores son perfectamente adecuadas para restaurantes, escuelas, hoteles, minoristas, almacenes, floristerías, laboratorios y más. Nos esforzamos por ir más allá al no solo ofrecer equipos de primera línea, sino también al garantizar que nuestros clientes siempre tengan acceso a nuestro equipo de expertos de confianza para recibir apoyo.",
+    "description": "Nuestra misión en All Point Thermal Systems es proporcionar soluciones de almacenamiento en frío ambientalmente responsables y confiables, con comprensión, cuidado y confianza. All Point Thermal Systems combina productos de alta calidad con experiencia en la industria. Estamos orgullosos de ofrecer cámaras frigoríficas y congeladores que están diseñados para durar y ser eficientes, y que pueden enviarse a nivel nacional. enviamos nuestra gama de productos desde dos almacenes individuales, para que nuestro equipo llegue más rápido a nuestros clientes. Con opciones personalizadas y diseñadas a medida que cuentan con una variedad de calificaciones de confianza en la industria, nuestras cámaras frigoríficas, congeladores y combinaciones de cámaras frigoríficas y congeladores son perfectamente adecuadas para restaurantes, escuelas, hoteles, minoristas, almacenes, floristerías, laboratorios y más. Nos esforzamos por ir más allá al no solo ofrecer equipos de primera línea, sino también al garantizar que nuestros clientes siempre tengan acceso a nuestro equipo de expertos de confianza para recibir apoyo.",
     "buttonContactText": "Contáctanos",
     "whoWeAre": "¿Quiénes Somos?",
     "secondTitle": "Nuestra Misión, Productos y Servicios para tus Diversas Necesidades",
@@ -179,10 +179,23 @@
   },
   "aboutPage": {
     "whoweare": {
-      "experience": "spanish experience",
+      "experience": "Years Experience",
       "title": "Who we are ?",
-      "description": "All Point Thermal Systems provides custom walk-in coolers and freezers with quality and efficiency. We serve various industries from two Dallas, TX. warehouses and have great customer service. We also donate to local food banks.",
+      "description": "All Point Thermal Systems provides custom walk-in coolers and freezers with quality and efficiency. We serve various industries  warehouses and have great customer service. We also donate to local food banks.",
       "contactButtonText": "Contact us"
+    },
+    "video": {
+      "title": "Team spanish",
+      "subTitle": "Meet Experience Team Member",
+      "description": "Start working with All Point Thermal Systems "
+    },
+    "ourTeam": {
+      "title": "Our Professional Team",
+      "description": "All Point Thermal Systems, your trusted partner in cold storage, offers premium-quality walk-in coolers and freezers. Designed for efficiency and durability, our custom-built options cater to restaurants, schools, hotels, retailers, and more. Our team of experts ensures exceptional support for all your cold storage needs. ",
+      "ceo": "C.E.O",
+      "ceoDescription": "The CEO of All Point Thermal Systems leads a team dedicated to environmentally responsible and reliable cold storage solutions.  ",
+      "manager": "Manager",
+      "managerDescription": "Their commitment to quality, efficiency, and customer support sets them apart."
     }
   }
 }

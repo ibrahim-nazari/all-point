@@ -1,33 +1,33 @@
+import { useTranslations } from "next-intl";
 import React from "react";
-const teams = [
-  {
-    id: 1,
-    position: "C.E.O.",
-    name: "Ronny Jofra",
-    title: "If the distribution of letters and 'words' is random",
-    image: "/aboutpage/01.jpg",
-  },
-  {
-    id: 2,
-    position: "Manager",
-    name: "Salma kama",
-    title: "If the distribution of letters and 'words' is random",
-    image: "/aboutpage/02.jpg",
-  },
-];
+
 const OurTeam = () => {
+  const t = useTranslations("aboutPage.ourTeam");
+  const teams = [
+    {
+      id: 1,
+      position: t("ceo"),
+      name: "Ronny Jofra",
+      title: t("ceoDescription"),
+      image: "/aboutpage/01.jpg",
+    },
+    {
+      id: 2,
+      position: t("manager"),
+      name: "Salma kama",
+      title: t("managerDescription"),
+      image: "/aboutpage/02.jpg",
+    },
+  ];
   return (
     <section className="relative md:py-24 py-16 bg-gray-50 dark:bg-slate-800 md:pb-0 pb-0">
       <div className="container relative">
         <div className="grid grid-cols-1 pb-8 text-center">
           <h3 className="mb-6 md:text-3xl text-2xl md:leading-normal leading-normal font-semibold">
-            Our Professional Team
+            {t("title")}
           </h3>
 
-          <p className="text-slate-400 max-w-xl mx-auto">
-            Start working with Tailwind CSS that can provide everything you need
-            to generate awareness, drive traffic, connect.
-          </p>
+          <p className="text-slate-400 max-w-xl mx-auto">{t("description")}</p>
         </div>
         {/* <!--end grid--> */}
 

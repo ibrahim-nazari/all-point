@@ -1,7 +1,9 @@
-import { PlayIcon } from "@heroicons/react/24/outline";
 import React from "react";
+import YouTubeVideo from "./YouTubeVideo";
+import { useTranslations } from "next-intl";
 
 const AboutYoutubeVideo = () => {
+  const t = useTranslations("aboutPage.video");
   return (
     <section className="relative md:py-24 py-16 bg-gray-50  md:pt-0 pt-0">
       <div className="container relative ">
@@ -15,14 +17,7 @@ const AboutYoutubeVideo = () => {
                     className="rounded-md shadow-lg"
                     alt=""
                   />
-                  <div className="absolute bottom-2/4 translate-y-2/4 start-0 end-0 text-center">
-                    <a
-                      href="/"
-                      className="lightbox size-20 rounded-full shadow-lg  inline-flex items-center justify-center bg-white  text-indigo-600 "
-                    >
-                      <PlayIcon className="h-20 w-20 bg-slate-700/10 rounded-full p-5 " />
-                    </a>
-                  </div>
+                  <YouTubeVideo />
                 </div>
               </div>
             </div>
@@ -33,10 +28,10 @@ const AboutYoutubeVideo = () => {
                     <div className="mt-8">
                       <div className="section-title text-md-start">
                         <h6 className="text-white/50 text-lg font-semibold">
-                          Team
+                          {t("title")}
                         </h6>
                         <h3 className="md:text-3xl text-2xl md:leading-normal leading-normal font-semibold text-white mt-2">
-                          Meet Experience Team Member
+                          {t("subTitle")}
                         </h3>
                       </div>
                     </div>
@@ -44,16 +39,8 @@ const AboutYoutubeVideo = () => {
                     <div className="mt-8">
                       <div className="section-title text-md-start">
                         <p className="text-white/50 max-w-xl mx-auto mb-2">
-                          Start working with Techwind that can provide
-                          everything you need to generate awareness, drive
-                          traffic, connect.
+                          {t("description")}
                         </p>
-                        <a
-                          href="https://shreethemes.in/techwind/landing/page-aboutus.html"
-                          className="text-white"
-                        >
-                          Read More
-                        </a>
                       </div>
                     </div>
                   </div>
