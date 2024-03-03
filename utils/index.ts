@@ -8,6 +8,7 @@ import {
   ContactInfoType,
   FilterProps,
   NavigationsType,
+  WhoWeAreDataType,
 } from "@types";
 
 export const calculateCarRent = (city_mpg: number, year: number) => {
@@ -179,4 +180,18 @@ export const extractContactInfo = (t: any) => {
   });
 
   return contacts;
+};
+
+export const extractWhoWeAreData = (t: any): WhoWeAreDataType => {
+  const experience = t("whoweare.experience");
+  const title = t("whoweare.title");
+  const description = t("whoweare.description");
+  const contactButtonText = t("whoweare.contactButtonText");
+
+  return {
+    experience,
+    title,
+    description,
+    contactButtonText,
+  };
 };

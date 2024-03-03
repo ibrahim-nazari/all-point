@@ -119,3 +119,9 @@ export interface ContactInfoType {
   link: string;
   id: number;
 }
+export interface WhoWeAreDataType {
+  experience: string;
+  title: string;
+  description: string;
+  contactButtonText: string;
+}

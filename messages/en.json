@@ -174,5 +174,13 @@
       "title": "554 Fard Street, Fard Avenue, CA 9437",
       "linkText": "View on Google map"
     }
+  },
+  "aboutPage": {
+    "whoweare": {
+      "experience": "Years Experience",
+      "title": "Who we are ?",
+      "description": "All Point Thermal Systems provides custom walk-in coolers and freezers with quality and efficiency. We serve various industries from two Dallas, TX. warehouses and have great customer service. We also donate to local food banks.",
+      "contactButtonText": "Contact us"
+    }
   }
 }

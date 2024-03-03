@@ -16,8 +16,8 @@ const TopNavbar = () => {
       <div className="container">
         <div className="grid grid-cols-1 content-center">
           <div className="flex items-center justify-between">
-            <ul className="list-none mb-0 h-100 flex items-center">
-              <li className="  mb-0 mx-3 hidden md:inline">
+            <ul className="list-none m-0 h-100 flex items-center">
+              <li className="  m-0 mt-1 mx-3 hidden md:inline">
                 <div className="text-white hover:text-gray-100  items-center inline-flex">
                   <ClockIcon className="h-5 w-5 mr-2 text-white" />
                   <span className="font-bold mr-3 text-sm ">
@@ -26,7 +26,7 @@ const TopNavbar = () => {
                   <span className="text-sm">{t("workDays")}</span>
                 </div>
               </li>
-              <li className=" mb-0 mx-3 hidden sm:inline">
+              <li className="m-0 mt-1 mx-3 hidden sm:inline">
                 <Link
                   href="mailto:contact@example.com"
                   className="text-white hover:text-gray-100 inline-flex items-center text-sm"
@@ -35,7 +35,7 @@ const TopNavbar = () => {
                   contact@example.com
                 </Link>
               </li>
-              <li className="inline mb-0 mx-3">
+              <li className="inline m-0 mt-1 mx-3">
                 <Link
                   href="tel:+78789768658675"
                   className="text-white hover:text-gray-100 inline-flex items-center text-sm"
