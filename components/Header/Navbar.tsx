@@ -63,29 +63,32 @@ const NavBar = ({ navigations, buttonGetQuoteText }: Props) => {
 
         <div id="navigation">
           <ul className="navigation-menu">
-            {navigations.map(({ title, link, submenu }: NavigationsType) => (
-              <li
-                className={` ${
-                  submenu ? "has-submenu" : ""
-                }  parent-parent-menu-item`}
-              >
-                <Link href={link}>{title}</Link>
-                {submenu?.length > 0 && (
-                  <>
-                    <span className="menu-arrow"></span>
-                    <ul className="submenu">
-                      {submenu.map(({ title, link }) => (
-                        <li>
-                          <Link className="sub-menu-item" href={link}>
-                            {title}
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                  </>
-                )}
-              </li>
-            ))}
+            {navigations.map(
+              ({ title, link, submenu }: NavigationsType, index) => (
+                <li
+                  className={` ${
+                    submenu ? "has-submenu" : ""
+                  }  parent-parent-menu-item`}
+                  key={index}
+                >
+                  <Link href={link}>{title}</Link>
+                  {submenu?.length > 0 && (
+                    <>
+                      <span className="menu-arrow"></span>
+                      <ul className="submenu">
+                        {submenu.map(({ title, link }, index) => (
+                          <li key={index}>
+                            <Link className="sub-menu-item" href={link}>
+                              {title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  )}
+                </li>
+              )
+            )}
           </ul>
         </div>
       </div>

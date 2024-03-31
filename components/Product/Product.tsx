@@ -7,9 +7,10 @@ interface Props {
   products: ProductType[];
   title: string;
   columns: number;
+  route:string;
 }
 
-const Product = ({ products, title, columns }: Props) => {
+const Product = ({ products, title, columns,route }: Props) => {
   const isActiveLocal = useLocale();
   return (
     <section>
@@ -32,7 +33,7 @@ const Product = ({ products, title, columns }: Props) => {
               className="relative rounded-md shadow-md dark:shadow-gray-800 overflow-hidden"
             >
               <Link
-                href={`/product/${product.slug}`}
+                href={`/${route}/${product.slug}`}
                 className="cursor-pointer"
               >
                 <img

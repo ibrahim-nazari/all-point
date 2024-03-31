@@ -61,6 +61,7 @@ const ToggleMenu = ({ navigations }: Props) => {
                       className={` ${
                         submenu ? "has-submenu" : ""
                       }  parent-parent-menu-item`}
+                      key={id}
                     >
                       <Link
                         onClick={(e) =>
@@ -78,8 +79,8 @@ const ToggleMenu = ({ navigations }: Props) => {
                               menuIds.includes(id) ? "open" : ""
                             }`}
                           >
-                            {submenu.map(({ title, link }) => (
-                              <li>
+                            {submenu.map(({ title, link }, index) => (
+                              <li key={index}>
                                 <Link className="sub-menu-item" href={link}>
                                   {title}
                                 </Link>

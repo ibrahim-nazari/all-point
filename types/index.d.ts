@@ -76,6 +76,14 @@ export interface NavigationsType {
 
 export interface ProductType {
   title: { en: string; es: string };
+  description:{ en: [{title:string,description:string}]; es: [{title:string,description:string}] } ;
+  image: string;
+  slug: string;
+  id: number;
+}
+export interface ServiceType {
+  title: { en: string; es: string };
+  description: { en: string[]; es: string[] };
   image: string;
   slug: string;
   id: number;

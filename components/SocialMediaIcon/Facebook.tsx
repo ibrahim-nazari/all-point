@@ -3,7 +3,7 @@ import React from "react";
 const Facebook = () => {
   return (
     <svg
-      fill="#000000"
+      fill="#fff"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="-143 145 512 512"
       className="h-6 w-6"
