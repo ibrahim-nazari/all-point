@@ -1,16 +1,16 @@
-import { ProductType } from "@types";
+import { ProductType, ServiceType } from "@types";
 import { useLocale } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
 interface Props {
-  products: ProductType[];
+  products: ProductType[] | ServiceType[];
   title: string;
   columns: number;
-  route:string;
+  route: string;
 }
 
-const Product = ({ products, title, columns,route }: Props) => {
+const Product = ({ products, title, columns, route }: Props) => {
   const isActiveLocal = useLocale();
   return (
     <section>
