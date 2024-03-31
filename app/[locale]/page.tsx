@@ -10,7 +10,7 @@ import ContactWrapper from "@components/Contact";
 import { generateStaticParamsLanguage } from "@utils";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { defaultProps } from "@types";
-export const generateStaticParams = generateStaticParamsLanguage();
+export const generateStaticParams = generateStaticParamsLanguage;
 type Props = defaultProps;
 
 export default function Home({ params: { locale } }: Props) {

@@ -6,7 +6,7 @@ import { notFound } from "next/navigation";
 import { generateStaticParamsLanguage } from "@utils";
 import { unstable_setRequestLocale } from "next-intl/server";
 type Props = defaultProps;
-export const generateStaticParams = generateStaticParamsLanguage();
+export const generateStaticParams = generateStaticParamsLanguage;
 
 type Language = "en" | "es";
 

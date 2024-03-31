@@ -8,7 +8,7 @@ import { generateStaticParamsLanguage } from "@utils";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { defaultProps } from "@types";
 type Props = defaultProps;
-export const generateStaticParams = generateStaticParamsLanguage();
+export const generateStaticParams = generateStaticParamsLanguage;
 import { useTranslations } from "next-intl";
 
 import React from "react";

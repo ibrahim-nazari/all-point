@@ -1,7 +1,7 @@
 import { defaultProps } from "@types";
 import { generateStaticParamsLanguage } from "@utils";
 
-export const generateStaticParams = generateStaticParamsLanguage();
+export const generateStaticParams = generateStaticParamsLanguage;
 import { unstable_setRequestLocale } from "next-intl/server";
 type Props = defaultProps;
 const Products = ({ params: { locale } }: Props) => {

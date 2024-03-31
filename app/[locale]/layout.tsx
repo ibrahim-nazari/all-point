@@ -7,7 +7,7 @@ import { Footer, Header } from "@components";
 
 // Can be imported from a shared config
 
-export const generateStaticParams = generateStaticParamsLanguage();
+export const generateStaticParams = generateStaticParamsLanguage;
 type Props = defaultProps & { children: React.ReactNode };
 export const metadata = {
   title: "All Points",
