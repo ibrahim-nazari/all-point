@@ -71,6 +71,7 @@ const NavBar = ({ navigations, buttonGetQuoteText }: Props) => {
                   }  parent-parent-menu-item`}
                   key={index}
                 >
+                  {/* @ts-ignore */}
                   <Link href={link}>{title}</Link>
                   {submenu?.length > 0 && (
                     <>
@@ -78,6 +79,7 @@ const NavBar = ({ navigations, buttonGetQuoteText }: Props) => {
                       <ul className="submenu">
                         {submenu.map(({ title, link }, index) => (
                           <li key={index}>
+                            {/* @ts-ignore */}
                             <Link className="sub-menu-item" href={link}>
                               {title}
                             </Link>
