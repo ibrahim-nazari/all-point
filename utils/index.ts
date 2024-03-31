@@ -197,6 +197,6 @@ export const extractWhoWeAreData = (t: any): WhoWeAreDataType => {
 };
 
 export const locales = ["en", "es"];
-export function generateStaticParamsLanguage {
+export const generateStaticParamsLanguage=()=> {
   return locales.map((locale) => ({ locale }));
 }
