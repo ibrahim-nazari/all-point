@@ -195,3 +195,8 @@ export const extractWhoWeAreData = (t: any): WhoWeAreDataType => {
     contactButtonText,
   };
 };
+
+export const locales = ["en", "es"];
+export function generateStaticParamsLanguage() {
+  return locales.map((locale) => ({ locale }));
+}

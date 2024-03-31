@@ -7,8 +7,14 @@ import { services, products } from "@data/product";
 
 import Blog from "@components/Blog";
 import ContactWrapper from "@components/Contact";
+import { generateStaticParamsLanguage } from "@utils";
+import { unstable_setRequestLocale } from "next-intl/server";
+import { defaultProps } from "@types";
+export const generateStaticParams = generateStaticParamsLanguage();
+type Props = defaultProps;
 
-export default function Home() {
+export default function Home({ params: { locale } }: Props) {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("productHome");
   return (
     <main className="overflow-hidden">

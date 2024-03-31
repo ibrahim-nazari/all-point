@@ -4,12 +4,17 @@ import {
   ContactInfo,
   Map,
 } from "@components/ContactPage";
-
+import { generateStaticParamsLanguage } from "@utils";
+import { unstable_setRequestLocale } from "next-intl/server";
+import { defaultProps } from "@types";
+type Props = defaultProps;
+export const generateStaticParams = generateStaticParamsLanguage();
 import { useTranslations } from "next-intl";
 
 import React from "react";
 
-const page = () => {
+const page = ({ params: { locale } }: Props) => {
+  unstable_setRequestLocale(locale);
   const t = useTranslations("contactHome");
   const contactData = {
     title: t("title"),

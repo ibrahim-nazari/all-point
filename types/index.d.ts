@@ -133,3 +133,7 @@ export interface WhoWeAreDataType {
   description: string;
   contactButtonText: string;
 }
+
+export interface defaultProps {
+  params: { locale: string,slug:string};
+}

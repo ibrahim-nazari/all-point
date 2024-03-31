@@ -1,3 +1,5 @@
+import { defaultProps } from "@types";
+import { unstable_setRequestLocale } from "next-intl/server";
 import Link from "next/link";
 
 export default function NotFound() {

@@ -1,26 +1,20 @@
 import { unstable_setRequestLocale } from "next-intl/server";
+import { generateStaticParamsLanguage } from "@utils";
+import { defaultProps } from "@types";
 import "../../globals.css";
 
 import { Footer, Header } from "@components";
 
 // Can be imported from a shared config
-const locales = ["en", "es"];
 
-export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
-}
+export const generateStaticParams = generateStaticParamsLanguage();
+type Props = defaultProps & { children: React.ReactNode };
 export const metadata = {
   title: "All Points",
   description: "Global Leader In Cold Storage Solutions",
 };
 
-const RootLayout = ({
-  children,
-  params: { locale },
-}: {
-  children: React.ReactNode;
-  params: { locale: string };
-}) => {
+const RootLayout = ({ children, params: { locale } }: Props) => {
   // Enable static rendering
   unstable_setRequestLocale(locale);
   return (

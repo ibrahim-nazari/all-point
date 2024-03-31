@@ -1,16 +1,18 @@
 import QuoteBanner from "@components/QuoteBanner";
 import { getOneService } from "@data/product";
-import { ServiceType } from "@types";
+import { ServiceType, defaultProps } from "@types";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import React from "react";
+import { generateStaticParamsLanguage } from "@utils";
+import { unstable_setRequestLocale } from "next-intl/server";
+type Props = defaultProps;
+export const generateStaticParams = generateStaticParamsLanguage();
 
-interface Props {
-  params: { slug: string };
-}
 type Language = "en" | "es";
 
-const Service = async ({ params: { slug } }: Props) => {
+const Service = async ({ params: { slug, locale } }: Props) => {
+  unstable_setRequestLocale(locale);
   // @ts-ignore
   const lan: Language = useLocale();
 

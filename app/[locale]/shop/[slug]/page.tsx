@@ -1,16 +1,17 @@
 import QuoteBanner from "@components/QuoteBanner";
 import { getOneProduct } from "@data/product";
-import { ProductType } from "@types";
+import { ProductType, defaultProps } from "@types";
 import { useLocale } from "next-intl";
 import { notFound } from "next/navigation";
-import React from "react";
+import { generateStaticParamsLanguage } from "@utils";
+import { unstable_setRequestLocale } from "next-intl/server";
+type Props = defaultProps;
+export const generateStaticParams = generateStaticParamsLanguage();
 
-interface Props {
-  params: { slug: string };
-}
 type Language = "en" | "es";
 
-const Product = async ({ params: { slug } }: Props) => {
+const Product = async ({ params: { slug, locale } }: Props) => {
+  unstable_setRequestLocale(locale);
   // @ts-ignore
   const lan: Language = useLocale();
 
